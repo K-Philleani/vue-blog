@@ -1,18 +1,44 @@
 <template>
   <div id="app">
-    <Blog-header :class="{'navBarWrap':navBarFixed}"></Blog-header>
-    <router-view/>
+    <Blog-header :class="{'navBarWrap':navBarFixed}" />
+    <el-row type="flex" justify="center" id="content">
+      <el-col :xs="20" :md="20" :style="{'minHeight': minHeight + 'px'}">
+        <router-view/>
+      </el-col>
+    </el-row>
+    <Blog-footer />
   </div>
 </template>
 <script>
-import BlogHeader from './components/bolg-header'
+import BlogHeader from './components/blog-header'
+import BlogFooter from './components/blog-footer'
 export default {
   components: {
-    BlogHeader
+    BlogHeader,
+    BlogFooter
+  },
+  mounted() {
+    this.minHeight = document.documentElement.clientHeight
+    window.addEventListener('scroll', this.watchScroll)
+    window.resize = () => {
+      this.minHeight = document.documentElement.clientHeight
+    }
   },
   data() {
     return {
-      navBarFixed: false
+      navBarFixed: false,
+      minHeight: 0,
+    }
+  },
+  methods: {
+    // 吸顶
+    watchScroll() {
+      var scrollTop = window.pageYOffset || document.getElement.scrollTop || document.body.scrollTop
+      if (scrollTop > 50) {
+        this.navBarFixed = true
+      } else {
+        this.navBarFixed = false
+      }
     }
   }
 }
