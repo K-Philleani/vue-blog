@@ -5,10 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    locale: 'zh'
   },
   mutations: {
+    changeLocale(state, playload) {
+      state.locale = playload.lang
+    }
   },
   actions: {
+    
   },
   modules: {
   }
