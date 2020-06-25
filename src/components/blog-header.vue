@@ -1,7 +1,14 @@
 <template>
   <div>
-    <el-menu class="d-flex" mode="horizontal" :default-active="activeIndex" :router="true" type="flex">
-      <el-menu-item class="mr-auto">Kphilleani</el-menu-item>
+    <el-menu 
+      class="d-flex" 
+      mode="horizontal" 
+      :default-active="activeIndex" 
+      :router="true" type="flex"
+    >
+      <el-menu-item class="mr-auto">
+        <router-link to="/" class="link">Kphilleani</router-link>
+      </el-menu-item>
       <el-menu-item index="/home">{{$t("header.home")}}</el-menu-item>
       <el-menu-item index="/archive">{{$t("header.archive")}}</el-menu-item>
       <el-menu-item index="/about">{{$t("header.about")}}</el-menu-item>
@@ -15,12 +22,19 @@
 </template>
 <script>
 export default {
+  mounted() {
+    this.urlActive()
+  },
   data() {
     return {
-      activeIndex: '/home'
+      activeIndex: this.$route.path
     }
   },
   methods: {
+    urlActive() {
+      this.activeIndex = '/home'
+      this.$router.push('/home')    
+    },
     toggleLang(lang) {
 				if(lang === 'zh') {
           this.$store.commit({
@@ -48,5 +62,7 @@ export default {
 }
 </script>
 <style scoped>
-
+.link {
+  text-decoration: none;
+}
 </style>

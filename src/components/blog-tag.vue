@@ -28,7 +28,7 @@ export default {
   methods: {
     tag(name) {
       this.$router.push({
-        name: 'tag',
+        name: 'Tag',
         params: {
           'name': name
         }
@@ -41,7 +41,7 @@ export default {
   .side {
     margin-bottom: 50px;
   }
-  .box-card .item:hover {
+  .item:hover {
 		color: #409EFF;
 		cursor: pointer;
 	}

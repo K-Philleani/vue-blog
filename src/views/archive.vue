@@ -1,6 +1,6 @@
 <template>
   <div class="archive">
-    <div class="count">{{$t('header.archive')}}</div>
+    <div class="count">{{this.$route.params.name || $t('header.archive')}}：234{{$t('archive.article')}}</div>
     <el-timeline>
       <el-timeline-item 
         v-for="(activity, index) in activities" 

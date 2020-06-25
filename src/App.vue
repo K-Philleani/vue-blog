@@ -33,7 +33,7 @@ export default {
   methods: {
     // 吸顶
     watchScroll() {
-      var scrollTop = window.pageYOffset || document.getElement.scrollTop || document.body.scrollTop
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
       if (scrollTop > 50) {
         this.navBarFixed = true
       } else {

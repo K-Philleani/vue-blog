@@ -1,26 +1,25 @@
-# vue-blog
+# Vue-Blog
 
-## Project setup
+## 安装依赖
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+  npm install
 ```
 
-### Compiles and minifies for production
+## 运行
 ```
-npm run build
+  npm run serve
+```
+## 项目运行在localhost:8888端口
+```
+  可以通过Vue.config.js文件,更改devServer下的port改变端口号
 ```
 
-### Run your tests
+#### 本项目源码资料学习自码云fengziy@aliyun.com
 ```
-npm run test
+  fengziy@aliyun.com
+  此项目仅供学习，欢迎联系讨论
+  本人邮箱: 964202623@qq.com
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+
+
