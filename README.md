@@ -14,9 +14,8 @@
   可以通过Vue.config.js文件,更改devServer下的port改变端口号
 ```
 
-#### 本项目源码资料学习自码云fengziy@aliyun.com
+#### 本项目源码资料学习自码云https://gitee.com/fengziy
 ```
-  fengziy@aliyun.com
   此项目仅供学习，欢迎联系讨论
   本人邮箱: 964202623@qq.com
 ```
